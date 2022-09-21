@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hibredu", "Hibredu\Hibredu.csproj", "{52587D58-3DA8-4884-B96A-974AA134FC74}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52587D58-3DA8-4884-B96A-974AA134FC74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52587D58-3DA8-4884-B96A-974AA134FC74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52587D58-3DA8-4884-B96A-974AA134FC74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52587D58-3DA8-4884-B96A-974AA134FC74}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB593EBE-6377-49D2-8CC0-5CE9143155AD}
+	EndGlobalSection
+EndGlobal
