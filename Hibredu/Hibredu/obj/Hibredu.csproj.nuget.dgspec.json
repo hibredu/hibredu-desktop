@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\beatr\\OneDrive\\Documentos\\Amor\\hibredu-desktop\\Hibredu\\Hibredu\\Hibredu.csproj": {}
+    "C:\\Users\\beatr\\OneDrive\\Área de Trabalho\\CTEDS\\hibredu-desktop\\Hibredu\\Hibredu\\Hibredu.csproj": {}
   },
   "projects": {
-    "C:\\Users\\beatr\\OneDrive\\Documentos\\Amor\\hibredu-desktop\\Hibredu\\Hibredu\\Hibredu.csproj": {
+    "C:\\Users\\beatr\\OneDrive\\Área de Trabalho\\CTEDS\\hibredu-desktop\\Hibredu\\Hibredu\\Hibredu.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\beatr\\OneDrive\\Documentos\\Amor\\hibredu-desktop\\Hibredu\\Hibredu\\Hibredu.csproj",
+        "projectUniqueName": "C:\\Users\\beatr\\OneDrive\\Área de Trabalho\\CTEDS\\hibredu-desktop\\Hibredu\\Hibredu\\Hibredu.csproj",
         "projectName": "Hibredu",
-        "projectPath": "C:\\Users\\beatr\\OneDrive\\Documentos\\Amor\\hibredu-desktop\\Hibredu\\Hibredu\\Hibredu.csproj",
+        "projectPath": "C:\\Users\\beatr\\OneDrive\\Área de Trabalho\\CTEDS\\hibredu-desktop\\Hibredu\\Hibredu\\Hibredu.csproj",
         "packagesPath": "C:\\Users\\beatr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\beatr\\OneDrive\\Documentos\\Amor\\hibredu-desktop\\Hibredu\\Hibredu\\obj\\",
+        "outputPath": "C:\\Users\\beatr\\OneDrive\\Área de Trabalho\\CTEDS\\hibredu-desktop\\Hibredu\\Hibredu\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

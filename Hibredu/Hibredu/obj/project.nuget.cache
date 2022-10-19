@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fwY2dAcS8Xz48hXzcffEc2eUdJlQEFgNq6+uHcEAZkVLOsRJ11vgjng31il8N/iCOSiT8VzdtXFd2aaVa+DZEA==",
+  "dgSpecHash": "+0FCuTYJfP4aWvVubFiz8RQ1cUgJJjdsR9doFMIYuSCrUqTr44QyXoRgmomAE/UWzAOcyMoHjpw2qo3NJQCQzQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\beatr\\OneDrive\\Documentos\\Amor\\hibredu-desktop\\Hibredu\\Hibredu\\Hibredu.csproj",
+  "projectFilePath": "C:\\Users\\beatr\\OneDrive\\Área de Trabalho\\CTEDS\\hibredu-desktop\\Hibredu\\Hibredu\\Hibredu.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\beatr\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.9\\microsoft.data.sqlite.core.6.0.9.nupkg.sha512",
     "C:\\Users\\beatr\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.9\\microsoft.entityframeworkcore.6.0.9.nupkg.sha512",
