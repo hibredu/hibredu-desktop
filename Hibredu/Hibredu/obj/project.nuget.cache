@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+0FCuTYJfP4aWvVubFiz8RQ1cUgJJjdsR9doFMIYuSCrUqTr44QyXoRgmomAE/UWzAOcyMoHjpw2qo3NJQCQzQ==",
+  "dgSpecHash": "JRkc9rnCFkSWRBcOqddtdJsloKbFR2ezD7tY6shzkmYOBRA2orebcNaIJaslVOJ5E+MbwFTJg2KA0GE0ngeTNA==",
   "success": true,
   "projectFilePath": "C:\\Users\\beatr\\OneDrive\\Área de Trabalho\\CTEDS\\hibredu-desktop\\Hibredu\\Hibredu\\Hibredu.csproj",
   "expectedPackageFiles": [
@@ -25,6 +25,11 @@
     "C:\\Users\\beatr\\.nuget\\packages\\sqlitepclraw.core\\2.0.6\\sqlitepclraw.core.2.0.6.nupkg.sha512",
     "C:\\Users\\beatr\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.6\\sqlitepclraw.lib.e_sqlite3.2.0.6.nupkg.sha512",
     "C:\\Users\\beatr\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.0.6\\sqlitepclraw.provider.e_sqlite3.2.0.6.nupkg.sha512",
+    "C:\\Users\\beatr\\.nuget\\packages\\syncfusion.data.wpf\\20.3.0.50\\syncfusion.data.wpf.20.3.0.50.nupkg.sha512",
+    "C:\\Users\\beatr\\.nuget\\packages\\syncfusion.licensing\\20.3.0.50\\syncfusion.licensing.20.3.0.50.nupkg.sha512",
+    "C:\\Users\\beatr\\.nuget\\packages\\syncfusion.sfchart.wpf\\20.3.0.50\\syncfusion.sfchart.wpf.20.3.0.50.nupkg.sha512",
+    "C:\\Users\\beatr\\.nuget\\packages\\syncfusion.sfgrid.wpf\\20.3.0.50\\syncfusion.sfgrid.wpf.20.3.0.50.nupkg.sha512",
+    "C:\\Users\\beatr\\.nuget\\packages\\syncfusion.shared.wpf\\20.3.0.50\\syncfusion.shared.wpf.20.3.0.50.nupkg.sha512",
     "C:\\Users\\beatr\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\beatr\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\beatr\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",

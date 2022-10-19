@@ -9,7 +9,9 @@
       "Hibredu/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Sqlite": "6.0.9",
-          "Microsoft.Extensions.DependencyInjection": "6.0.0"
+          "Microsoft.Extensions.DependencyInjection": "6.0.0",
+          "Syncfusion.SfChart.WPF": "20.3.0.50",
+          "Syncfusion.SfGrid.WPF": "20.3.0.50"
         },
         "runtime": {
           "Hibredu.dll": {}
@@ -315,6 +317,57 @@
           }
         }
       },
+      "Syncfusion.Data.WPF/20.3.0.50": {
+        "runtime": {
+          "lib/net5.0-windows7.0/Syncfusion.Data.WPF.dll": {
+            "assemblyVersion": "20.3500.0.50",
+            "fileVersion": "20.3500.0.50"
+          }
+        }
+      },
+      "Syncfusion.Licensing/20.3.0.50": {
+        "runtime": {
+          "lib/net6.0/Syncfusion.Licensing.dll": {
+            "assemblyVersion": "20.3.0.50",
+            "fileVersion": "20.3.0.50"
+          }
+        }
+      },
+      "Syncfusion.SfChart.WPF/20.3.0.50": {
+        "dependencies": {
+          "Syncfusion.Licensing": "20.3.0.50"
+        },
+        "runtime": {
+          "lib/net5.0-windows7.0/Syncfusion.SfChart.WPF.dll": {
+            "assemblyVersion": "20.3500.0.50",
+            "fileVersion": "20.3500.0.50"
+          }
+        }
+      },
+      "Syncfusion.SfGrid.WPF/20.3.0.50": {
+        "dependencies": {
+          "Syncfusion.Data.WPF": "20.3.0.50",
+          "Syncfusion.Licensing": "20.3.0.50",
+          "Syncfusion.Shared.WPF": "20.3.0.50"
+        },
+        "runtime": {
+          "lib/net5.0-windows7.0/Syncfusion.SfGrid.WPF.dll": {
+            "assemblyVersion": "20.3500.0.50",
+            "fileVersion": "20.3500.0.50"
+          }
+        }
+      },
+      "Syncfusion.Shared.WPF/20.3.0.50": {
+        "dependencies": {
+          "Syncfusion.Licensing": "20.3.0.50"
+        },
+        "runtime": {
+          "lib/net5.0-windows7.0/Syncfusion.Shared.WPF.dll": {
+            "assemblyVersion": "20.3500.0.50",
+            "fileVersion": "20.3500.0.50"
+          }
+        }
+      },
       "System.Buffers/4.5.1": {},
       "System.Collections.Immutable/6.0.0": {
         "dependencies": {
@@ -493,6 +546,41 @@
       "sha512": "sha512-peXLJbhU+0clVBIPirihM1NoTBqw8ouBpcUsVMlcZ4k6fcL2hwgkctVB2Nt5VsbnOJcPspQL5xQK7QvLpxkMgg==",
       "path": "sqlitepclraw.provider.e_sqlite3/2.0.6",
       "hashPath": "sqlitepclraw.provider.e_sqlite3.2.0.6.nupkg.sha512"
+    },
+    "Syncfusion.Data.WPF/20.3.0.50": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6NTZUzhTObRaM5D6ChxcIUu+nAHiCVvFLxBH991TNMjKrCuGdmHelHVHICWeyE+j3Z0oW8ELQs+DpRV2xYwQ6A==",
+      "path": "syncfusion.data.wpf/20.3.0.50",
+      "hashPath": "syncfusion.data.wpf.20.3.0.50.nupkg.sha512"
+    },
+    "Syncfusion.Licensing/20.3.0.50": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KxTr1PgtR8lyLPTEvcNAEkacGfoysT0ZVQetVsqAHUiRKCRiKGy8ymwYDVX/Ug/WzTWW+NvICSIGDe5yaWMhnw==",
+      "path": "syncfusion.licensing/20.3.0.50",
+      "hashPath": "syncfusion.licensing.20.3.0.50.nupkg.sha512"
+    },
+    "Syncfusion.SfChart.WPF/20.3.0.50": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BCuCW3MMrhRNTGvC60kLQKvS0F97jZ7pBngF3V+41f8M9PEosa/sCZe/DKQqGn2ervBohbaV8+Cm9t3o72f2Nw==",
+      "path": "syncfusion.sfchart.wpf/20.3.0.50",
+      "hashPath": "syncfusion.sfchart.wpf.20.3.0.50.nupkg.sha512"
+    },
+    "Syncfusion.SfGrid.WPF/20.3.0.50": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-p46AlQcH7GuGZIPOPA7/8FwGMTQT/k9zfeJjOvUMG+MpVJuWOm8Ey+tHOP/rHYP9WylCxtgxuszPa/0NrzRqJQ==",
+      "path": "syncfusion.sfgrid.wpf/20.3.0.50",
+      "hashPath": "syncfusion.sfgrid.wpf.20.3.0.50.nupkg.sha512"
+    },
+    "Syncfusion.Shared.WPF/20.3.0.50": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-R8zCGPKe8UvxeUI60Qs55LYzNm/L5Rz+wMgPaZ4lgMU4/RDs8hubm4H5nWzYmViPrMFhRUgAg2jtC7AWwSXUiQ==",
+      "path": "syncfusion.shared.wpf/20.3.0.50",
+      "hashPath": "syncfusion.shared.wpf.20.3.0.50.nupkg.sha512"
     },
     "System.Buffers/4.5.1": {
       "type": "package",

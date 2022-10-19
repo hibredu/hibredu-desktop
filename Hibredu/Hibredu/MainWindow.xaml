@@ -3,94 +3,132 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Hibredu"
+        xmlns:local="clr-namespace:Hibredu.Data"
+        xmlns:syncfusion="clr-namespace:Syncfusion.UI.Xaml.Charts;assembly=Syncfusion.SfChart.WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="800">
+    <Window.DataContext>
+        <local:Context/>
+    </Window.DataContext>
+    
+    
     <ScrollViewer>
         <StackPanel>
             <StackPanel>
 
                 <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="45" />
-                <RowDefinition />
-                <RowDefinition />
-            </Grid.RowDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45" />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
 
-            <Label FontSize="18" 
+                    <Label FontSize="18" 
                        HorizontalAlignment="Center" 
                        VerticalAlignment="Center" Margin="5" 
                        Grid.Row="0" Content="Student registration"/>
 
-            <DataGrid x:Name="StudentDataGrid" AutoGenerateColumns="False" IsReadOnly="True"
+                    <DataGrid x:Name="StudentDataGrid" AutoGenerateColumns="False" IsReadOnly="True"
                           Grid.Row="1" ColumnWidth="*" Margin="5" IsSynchronizedWithCurrentItem="True">
 
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Student Id" Binding="{Binding Id}"/>
-                    <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
-                    <DataGridTextColumn Header="Average" Binding="{Binding Average}"/>
-                    <DataGridTextColumn Header="Frequency" Binding="{Binding Frequency}"/>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Student Id" Binding="{Binding Id}"/>
+                            <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                            <DataGridTextColumn Header="Average" Binding="{Binding Average}"/>
+                            <DataGridTextColumn Header="Frequency" Binding="{Binding Frequency}"/>
 
 
-                    <DataGridTemplateColumn Header="Delete Student register">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <Button Content="Delete" Click="DeleteStudent"/>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                </DataGrid.Columns>
-            </DataGrid>
+                            <DataGridTemplateColumn Header="Delete Student register">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Delete" Click="DeleteStudent"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
 
-                <Grid Grid.Row="2">
+                    <Grid Grid.Row="2">
 
-                    <Border Grid.Column="0" Margin="5" BorderThickness="1" BorderBrush="Black">
-                        <StackPanel Margin="5">
-                            <Label Content="Add new student" FontWeight="Bold" 
+                        <Border Grid.Column="0" Margin="5" BorderThickness="1" BorderBrush="Black">
+                            <StackPanel Margin="5">
+                                <Label Content="Add new student" FontWeight="Bold" 
                                    HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5"/>
 
-                            <Grid Name="NewStudentGrid">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition />
-                                    <RowDefinition />
-                                    <RowDefinition />
-                                    <RowDefinition />
-                                </Grid.RowDefinitions>
+                                <Grid Name="NewStudentGrid">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
 
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition />
-                                    <ColumnDefinition />
-                                </Grid.ColumnDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
 
-                                <Label Grid.Row="0" Grid.Column="0" Content="Name" />
-                                <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Name}" />
+                                    <Label Grid.Row="0" Grid.Column="0" Content="Name" />
+                                    <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Name}" />
 
-                                <Label Grid.Row="1" Grid.Column="0" Content="Average" />
-                                <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Average}" />
+                                    <Label Grid.Row="1" Grid.Column="0" Content="Average" />
+                                    <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Average}" />
 
-                                <Label Grid.Row="2" Grid.Column="0" Content="Frequency" />
-                                <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Frequency}" />
+                                    <Label Grid.Row="2" Grid.Column="0" Content="Frequency" />
+                                    <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Frequency}" />
 
 
-                                <Button Grid.Row="4" Grid.ColumnSpan="2" Width="150" Content="Add student register"
+                                    <Button Grid.Row="4" Grid.ColumnSpan="2" Width="150" Content="Add student register"
                                         Margin="15" Click="AddItem"
                                         HorizontalAlignment="Center"
                                         VerticalAlignment="Center"/>
-                            </Grid>
-                        </StackPanel>
-                    </Border>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
 
+
+                    </Grid>
+                </Grid>
+            </StackPanel>
+
+            <StackPanel>
+                <Label FontSize="18" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" Margin="5" 
+                       Grid.Row="0" Content="Students data analysis"/>
+
+                <!--Setting DataContext for SfChart-->
+                <Grid>
+
+                    <syncfusion:SfChart Header="Graph of average per student" Height="300" Margin="30,0,30,0">
+                        <!--Initialize the horizontal axis for SfChart-->
+                        <syncfusion:SfChart.PrimaryAxis>
+                            <syncfusion:CategoryAxis Header="Student name" FontSize="16"/>
+                        </syncfusion:SfChart.PrimaryAxis>
+
+                        <!--Initialize the vertical axis for SfChart-->
+                        <syncfusion:SfChart.SecondaryAxis>
+                            <syncfusion:NumericalAxis Header="Average" FontSize="16"/>
+                        </syncfusion:SfChart.SecondaryAxis>
+
+                        <!--Adding Legend to the SfChart-->
+                        <syncfusion:SfChart.Legend>
+                            <syncfusion:ChartLegend/>
+                        </syncfusion:SfChart.Legend>
+
+                        <!--Initialize the series for SfChart-->
+                        <syncfusion:ColumnSeries Label="Average" ItemsSource="{Binding StudentsData}" XBindingPath="Name" YBindingPath="Average" ShowTooltip="True" >
+                            <syncfusion:ColumnSeries.AdornmentsInfo>
+                                <syncfusion:ChartAdornmentInfo ShowLabel="True" >
+                                </syncfusion:ChartAdornmentInfo>
+                            </syncfusion:ColumnSeries.AdornmentsInfo>
+                        </syncfusion:ColumnSeries>
+
+                    </syncfusion:SfChart>
 
                 </Grid>
-            </Grid>
-        </StackPanel>
 
-        <StackPanel>
-            <Label Height="120" Content="aaaa"/>
-            <Label Height="120" Content="aaaa"/>
-            <Label Height="120" Content="aaaa"/>
-            <Label Height="120" Content="aaaa"/>
-        </StackPanel>
+            </StackPanel>
         </StackPanel>
     </ScrollViewer>
 </Window>
