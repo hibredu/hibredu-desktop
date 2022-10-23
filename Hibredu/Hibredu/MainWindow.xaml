@@ -162,7 +162,7 @@
 
             </StackPanel>
             <!---->
-            <StackPanel Height="788">
+            <StackPanel Height="200">
                 <Grid Width="500">
                     <Label FontSize="20" 
                        HorizontalAlignment="Center" 
@@ -181,6 +181,28 @@
                             <DataGridTextColumn Header="2.5 - 5.0" Binding="{Binding column2}"/>
                             <DataGridTextColumn Header="5.0 - 7.5" Binding="{Binding column3}"/>
                             <DataGridTextColumn Header="7.5 - 10.0" Binding="{Binding column4}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+
+
+                </Grid>
+            </StackPanel>
+
+            <StackPanel Height="200">
+                <Grid Width="500">
+                    <Label FontSize="16" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Top"
+                       Grid.Row="0" Content="Student frequency in ranges"/>
+
+                    <DataGrid x:Name="StudentesInFrequencyRange" AutoGenerateColumns="False" IsReadOnly="True" ColumnWidth="*" Margin="5,46,5,21" IsSynchronizedWithCurrentItem="True">
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="0.00 - 0.25" Binding="{Binding column1}"/>
+                            <DataGridTextColumn Header="0.25 - 0.50" Binding="{Binding column2}"/>
+                            <DataGridTextColumn Header="0.50 - 0.75" Binding="{Binding column3}"/>
+                            <DataGridTextColumn Header="0.75 - 1.00" Binding="{Binding column4}"/>
                         </DataGrid.Columns>
                     </DataGrid>
 

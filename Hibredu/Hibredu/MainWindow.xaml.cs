@@ -33,6 +33,7 @@ public partial class MainWindow : Window
     {
         StudentDataGrid.ItemsSource = context.Students.ToList();
         StudentesInGradeRange.ItemsSource = StudentesInGradeRanges(context.Students.ToList());
+        StudentesInFrequencyRange.ItemsSource = StudentesInFrequencyRanges(context.Students.ToList());
     }
 
     private void AddItem(object s, RoutedEventArgs e)
@@ -81,6 +82,41 @@ public partial class MainWindow : Window
                 listRanges[0].column2++;
             }
             else if (listStudents[studentNum].Average < 7.5)
+            {
+                listRanges[0].column3++;
+            }
+            else
+            {
+                listRanges[0].column4++;
+            }
+
+        }
+
+        return listRanges;
+
+    }
+
+    private List<GenericTable> StudentesInFrequencyRanges(List<Student> listStudents)
+    {
+        var listRanges = new List<GenericTable> { new GenericTable
+            {
+                column1 = 0,
+                column2 = 0,
+                column3 = 0,
+                column4 = 0
+            }};
+
+        for (int studentNum = 0; studentNum < listStudents.Count; studentNum++)
+        {
+            if (listStudents[studentNum].Frequency < 0.25)
+            {
+                listRanges[0].column1++;
+            }
+            else if (listStudents[studentNum].Frequency < 0.50)
+            {
+                listRanges[0].column2++;
+            }
+            else if (listStudents[studentNum].Frequency < 0.75)
             {
                 listRanges[0].column3++;
             }
