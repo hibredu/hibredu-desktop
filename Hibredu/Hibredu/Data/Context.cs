@@ -168,4 +168,43 @@ public class Context : DbContext
 			},
 		};
 	}
+	/// <summary>
+	/// //////////
+	/// </summary>
+
+	private int numMedMenor25 = 0;
+
+	public int NumMedMenor25
+
+	{
+
+		get { return numMedMenor25; }
+
+		set { NumMedMenor25 = value; }
+
+	}
+
+	private int numMedMenor5 = 0;
+
+	public int NumMedMenor5
+
+	{
+
+		get { return numMedMenor5; }
+
+		set { NumMedMenor5 = value; }
+
+	}
+
+	private int numMedMenor75 = 6;
+
+	public int NumMedMenor75
+
+	{
+
+		get { return numMedMenor75; }
+
+		set { NumMedMenor75 = value; }
+
+	}
 }

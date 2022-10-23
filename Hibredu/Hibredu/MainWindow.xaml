@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Hibredu.Data"
         xmlns:syncfusion="clr-namespace:Syncfusion.UI.Xaml.Charts;assembly=Syncfusion.SfChart.WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800">
+        Title="Hibredu" Height="5000" Width="800">
     <Window.DataContext>
         <local:Context/>
     </Window.DataContext>
@@ -160,6 +160,58 @@
 
                 </Grid>
 
+            </StackPanel>
+            <!---->
+            <StackPanel Height="788">
+                <Grid Width="533" Height="482">
+                    <Label FontSize="18" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Top" Margin="5" 
+                       Grid.Row="0" Content="Student parameters"/>
+
+                    <FlowDocumentReader UseLayoutRounding="True" SnapsToDevicePixels="True" Margin="0,70,0,302">
+                        <FlowDocumentReader.Resources>
+                            <Style TargetType="TableCell">
+                                <Setter Property="TextAlignment" Value="Center"/>
+                            </Style>
+                        </FlowDocumentReader.Resources>
+                        <FlowDocument>
+                            <Table CellSpacing="0">
+                                <Table.Columns>
+                                    <TableColumn/>
+                                    <TableColumn/>
+                                    <TableColumn/>
+                                </Table.Columns>
+                                <TableRowGroup>
+                                    <TableRow>
+                                        <TableCell BorderBrush="Black" BorderThickness="1,1,1,1">
+                                            <Paragraph>Number of notes less than 2.5</Paragraph>
+                                        </TableCell>
+                                        <TableCell BorderBrush="Black" BorderThickness="1,1,1,1">
+                                            <Paragraph>>Number of notes less than 5.0</Paragraph>
+                                        </TableCell>
+                                        <TableCell BorderBrush="Black" BorderThickness="1,1,1,1">
+                                            <Paragraph>N>Number of notes less than 7.5</Paragraph>
+                                        </TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                        <TableCell BorderBrush="Black" BorderThickness="1,0,1,1" TextAlignment="Center">
+                                            <Paragraph FontWeight="Black">0</Paragraph>
+                                        </TableCell>
+                                        <TableCell BorderBrush="Black" BorderThickness="0,0,1,1">
+                                            <Paragraph>0</Paragraph>
+                                        </TableCell>
+                                        <TableCell BorderBrush="Black" BorderThickness="0,0,1,1">
+                                            <Paragraph>6</Paragraph>
+                                        </TableCell>
+                                    </TableRow>
+                                </TableRowGroup>
+                            </Table>
+                        </FlowDocument>
+                    </FlowDocumentReader>
+                    
+                    
+                </Grid>
             </StackPanel>
         </StackPanel>
     </ScrollViewer>
