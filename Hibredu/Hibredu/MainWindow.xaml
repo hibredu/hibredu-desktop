@@ -163,54 +163,29 @@
             </StackPanel>
             <!---->
             <StackPanel Height="788">
-                <Grid Width="533" Height="482">
-                    <Label FontSize="18" 
+                <Grid Width="500">
+                    <Label FontSize="20" 
                        HorizontalAlignment="Center" 
                        VerticalAlignment="Top" Margin="5" 
                        Grid.Row="0" Content="Student parameters"/>
 
-                    <FlowDocumentReader UseLayoutRounding="True" SnapsToDevicePixels="True" Margin="0,70,0,302">
-                        <FlowDocumentReader.Resources>
-                            <Style TargetType="TableCell">
-                                <Setter Property="TextAlignment" Value="Center"/>
-                            </Style>
-                        </FlowDocumentReader.Resources>
-                        <FlowDocument>
-                            <Table CellSpacing="0">
-                                <Table.Columns>
-                                    <TableColumn/>
-                                    <TableColumn/>
-                                    <TableColumn/>
-                                </Table.Columns>
-                                <TableRowGroup>
-                                    <TableRow>
-                                        <TableCell BorderBrush="Black" BorderThickness="1,1,1,1">
-                                            <Paragraph>Number of notes less than 2.5</Paragraph>
-                                        </TableCell>
-                                        <TableCell BorderBrush="Black" BorderThickness="1,1,1,1">
-                                            <Paragraph>>Number of notes less than 5.0</Paragraph>
-                                        </TableCell>
-                                        <TableCell BorderBrush="Black" BorderThickness="1,1,1,1">
-                                            <Paragraph>N>Number of notes less than 7.5</Paragraph>
-                                        </TableCell>
-                                    </TableRow>
-                                    <TableRow>
-                                        <TableCell BorderBrush="Black" BorderThickness="1,0,1,1" TextAlignment="Center">
-                                            <Paragraph FontWeight="Black">0</Paragraph>
-                                        </TableCell>
-                                        <TableCell BorderBrush="Black" BorderThickness="0,0,1,1">
-                                            <Paragraph>0</Paragraph>
-                                        </TableCell>
-                                        <TableCell BorderBrush="Black" BorderThickness="0,0,1,1">
-                                            <Paragraph>6</Paragraph>
-                                        </TableCell>
-                                    </TableRow>
-                                </TableRowGroup>
-                            </Table>
-                        </FlowDocument>
-                    </FlowDocumentReader>
-                    
-                    
+                    <Label FontSize="16" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Top" Margin="0,44,0,0" 
+                       Grid.Row="0" Content="Number of grades in ranges"/>
+
+                    <DataGrid x:Name="StudentesInGradeRange" AutoGenerateColumns="False" IsReadOnly="True" ColumnWidth="*" Margin="5,94,5,-27" IsSynchronizedWithCurrentItem="True">
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="0.0 - 2.5" Binding="{Binding column1}"/>
+                            <DataGridTextColumn Header="2.5 - 5.0" Binding="{Binding column2}"/>
+                            <DataGridTextColumn Header="5.0 - 7.5" Binding="{Binding column3}"/>
+                            <DataGridTextColumn Header="7.5 - 10.0" Binding="{Binding column4}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+
+
                 </Grid>
             </StackPanel>
         </StackPanel>

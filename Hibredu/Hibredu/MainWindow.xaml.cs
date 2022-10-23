@@ -32,6 +32,7 @@ public partial class MainWindow : Window
     private void GetProducts()
     {
         StudentDataGrid.ItemsSource = context.Students.ToList();
+        StudentesInGradeRange.ItemsSource = StudentesInGradeRanges(context.Students.ToList());
     }
 
     private void AddItem(object s, RoutedEventArgs e)
@@ -58,5 +59,39 @@ public partial class MainWindow : Window
         context.StudentsData.Remove(productToDelete);
         context.SaveChanges();
         GetProducts();
+    }
+
+    private List<GenericTable> StudentesInGradeRanges(List<Student> listStudents)
+    {
+        var listRanges = new List<GenericTable> { new GenericTable
+            {
+                column1 = 0,
+                column2 = 0,
+                column3 = 0,
+                column4 = 0
+            }};
+
+        for(int studentNum = 0; studentNum < listStudents.Count; studentNum++)
+        {
+            if (listStudents[studentNum].Average < 2.5)
+            {
+                listRanges[0].column1++;
+            }else if (listStudents[studentNum].Average < 5.0)
+            {
+                listRanges[0].column2++;
+            }
+            else if (listStudents[studentNum].Average < 7.5)
+            {
+                listRanges[0].column3++;
+            }
+            else
+            {
+                listRanges[0].column4++;
+            }
+
+        }
+
+        return listRanges;
+
     }
 }
