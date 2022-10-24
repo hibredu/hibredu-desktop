@@ -36,6 +36,7 @@ public partial class MainWindow : Window
         StudentesInGradeRange.ItemsSource = StudentesInGradeRanges(context.Students.ToList());
         StudentesInFrequencyRange.ItemsSource = StudentesInFrequencyRanges(context.Students.ToList());
         StudentesAverageInfo.ItemsSource = StudentesAverageInfos(context.Students.ToList());
+        StudentesFrequencyInfo.ItemsSource = StudentesFrequencyInfos(context.Students.ToList());
     }
 
     private void AddItem(object s, RoutedEventArgs e)
@@ -161,5 +162,35 @@ public partial class MainWindow : Window
         averageInfo[0].column5 = Math.Round(averageList.Max(), 3);
 
         return averageInfo;
+    }
+
+    private List<GenericTable> StudentesFrequencyInfos(List<Student> listStudents)
+    {
+        double studentGrade;
+
+        var frequencyInfo = new List<GenericTable> { new GenericTable
+            {
+                column1 = 0,
+                column2 = 0,
+                column3 = 0,
+                column4 = 0,
+                column5 = 0
+            }};
+
+        var frequencyList = new List<double>();
+
+        for (int studentNum = 0; studentNum < listStudents.Count; studentNum++)
+        {
+            studentGrade = listStudents[studentNum].Frequency;
+            frequencyList.Add(studentGrade);
+        }
+
+        frequencyInfo[0].column1 = Math.Round(frequencyList.Average(), 3);
+        frequencyInfo[0].column2 = Math.Round(frequencyList.Median(), 3);
+        frequencyInfo[0].column3 = Math.Round(frequencyList.StandardDeviation(), 3);
+        frequencyInfo[0].column4 = Math.Round(frequencyList.Min(), 3);
+        frequencyInfo[0].column5 = Math.Round(frequencyList.Max(), 3);
+
+        return frequencyInfo;
     }
 }
