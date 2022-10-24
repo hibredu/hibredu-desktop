@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "JRkc9rnCFkSWRBcOqddtdJsloKbFR2ezD7tY6shzkmYOBRA2orebcNaIJaslVOJ5E+MbwFTJg2KA0GE0ngeTNA==",
+  "dgSpecHash": "1wrkUh/INlsgUszUrwANMz+JoNv6Jax96Skg3DWAE/5JoWyzH78ziXEME3xrJ2S5o+DGbhI6sfxKyYpfX4nIfg==",
   "success": true,
   "projectFilePath": "C:\\Users\\beatr\\OneDrive\\Área de Trabalho\\CTEDS\\hibredu-desktop\\Hibredu\\Hibredu\\Hibredu.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\beatr\\.nuget\\packages\\fsharp.core\\6.0.2\\fsharp.core.6.0.2.nupkg.sha512",
+    "C:\\Users\\beatr\\.nuget\\packages\\mathnet.numerics\\5.0.0\\mathnet.numerics.5.0.0.nupkg.sha512",
+    "C:\\Users\\beatr\\.nuget\\packages\\mathnet.numerics.fsharp\\5.0.0\\mathnet.numerics.fsharp.5.0.0.nupkg.sha512",
     "C:\\Users\\beatr\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.9\\microsoft.data.sqlite.core.6.0.9.nupkg.sha512",
     "C:\\Users\\beatr\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.9\\microsoft.entityframeworkcore.6.0.9.nupkg.sha512",
     "C:\\Users\\beatr\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.9\\microsoft.entityframeworkcore.abstractions.6.0.9.nupkg.sha512",

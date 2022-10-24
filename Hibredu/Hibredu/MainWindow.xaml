@@ -162,7 +162,7 @@
 
             </StackPanel>
             <!---->
-            <StackPanel Height="200">
+            <StackPanel Height="199">
                 <Grid Width="500">
                     <Label FontSize="20" 
                        HorizontalAlignment="Center" 
@@ -189,7 +189,7 @@
                 </Grid>
             </StackPanel>
 
-            <StackPanel Height="200">
+            <StackPanel Height="201">
                 <Grid Width="500">
                     <Label FontSize="16" 
                        HorizontalAlignment="Center" 
@@ -203,6 +203,29 @@
                             <DataGridTextColumn Header="0.25 - 0.50" Binding="{Binding column2}"/>
                             <DataGridTextColumn Header="0.50 - 0.75" Binding="{Binding column3}"/>
                             <DataGridTextColumn Header="0.75 - 1.00" Binding="{Binding column4}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+
+
+                </Grid>
+            </StackPanel>
+
+            <StackPanel Height="200">
+                <Grid Width="500">
+                    <Label FontSize="16" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Top"
+                       Grid.Row="0" Content="Student grades info"/>
+
+                    <DataGrid x:Name="StudentesAverageInfo" AutoGenerateColumns="False" IsReadOnly="True" ColumnWidth="*" Margin="5,46,5,21" IsSynchronizedWithCurrentItem="True">
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Average" Binding="{Binding column1}"/>
+                            <DataGridTextColumn Header="Median" Binding="{Binding column2}"/>
+                            <DataGridTextColumn Header="Standard deviation" Binding="{Binding column3}"/>
+                            <DataGridTextColumn Header="Minimum" Binding="{Binding column4}"/>
+                            <DataGridTextColumn Header="Maximum" Binding="{Binding column5}"/>
                         </DataGrid.Columns>
                     </DataGrid>
 
