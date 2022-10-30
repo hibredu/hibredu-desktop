@@ -22,7 +22,7 @@ at **Escola Politécnica** of **USP - Universidade de São Paulo**.
    git clone https://github.com/hibredu/hibredu-desktop.git
    ```
 
-2. (Under construction)
+2. Open project using Microsoft Visual Studio
 
 
 ## 🤝🏻 Contributing
@@ -60,15 +60,21 @@ at **Escola Politécnica** of **USP - Universidade de São Paulo**.
 
 ### 🪧 Owners
 
-<div style="display: flex; width: 1000px">
-   <a href="https://www.linkedin.com/in/gspetillo/" style="margin: 10px;">
-      <img src="https://avatars.githubusercontent.com/u/32914162?v=4" alt="Gabriel Petillo 🎖️" width="100px"/>
-      <p style="width: 100px; text-align: center; font-size: 11px; font-weight: bold">Gabriel Petillo 🎖️</p>
-   </a>
-    <a href="https://www.linkedin.com/in/Pauloguilhermepp/" style="margin: 10px;">
-      <img src="https://avatars.githubusercontent.com/u/85118191?v=4" alt="Paulo Guilherme 🎖️" width="100px"/>
-      <p style="width: 110px; text-align: center; font-size: 11px; font-weight: bold">Paulo Guilherme 🎖️</p>
-   </a>
+<div id="image-table">
+    <table>
+	    <tr>
+    	    <td style="padding:10px">
+            <img src="https://avatars.githubusercontent.com/u/32914162?v=4" alt="Gabriel Petillo 🎖️" width="150px"/>
+            <p style="width: 100px; text-align: center; font-size: 11px; font-weight: bold">Gabriel Petillo 🎖️</p>
+            </a>
+      	   </td>
+            <td style="padding:10px">
+               <img src="https://avatars.githubusercontent.com/u/85118191?v=4" alt="Paulo Guilherme 🎖️" width="150px"/>
+               <p style="width: 110px; text-align: center; font-size: 11px; font-weight: bold">Paulo Guilherme 🎖️</p>
+               </a>
+            </td>
+        </tr>
+    </table>
 </div>
 
 <!-- ### 💯 Contributors -->
