@@ -112,7 +112,7 @@
                         </syncfusion:SfChart.SecondaryAxis>
 
                         <!--Initialize the series for SfChart-->
-                        <syncfusion:ColumnSeries ItemsSource="{Binding StudentsData}" XBindingPath="Name" YBindingPath="Average" ShowTooltip="True" >
+                        <syncfusion:ColumnSeries x:Name="StudentsDataAverage"  ListenPropertyChange="True"  ItemsSource="{Binding StudentsData, Mode=OneTime}" XBindingPath="Name" YBindingPath="Average">
                             <syncfusion:ColumnSeries.AdornmentsInfo>
                                 <syncfusion:ChartAdornmentInfo ShowLabel="True" >
                                 </syncfusion:ChartAdornmentInfo>
@@ -148,7 +148,7 @@
                         </syncfusion:SfChart.SecondaryAxis>
 
                         <!--Initialize the series for SfChart-->
-                        <syncfusion:ColumnSeries ItemsSource="{Binding StudentsData}" XBindingPath="Name" YBindingPath="Frequency" ShowTooltip="True" >
+                        <syncfusion:ColumnSeries x:Name="StudentsDataFrequency"  ListenPropertyChange="True"  ItemsSource="{Binding StudentsData, Mode=OneTime}" XBindingPath="Name" YBindingPath="Frequency">
                             <syncfusion:ColumnSeries.AdornmentsInfo>
                                 <syncfusion:ChartAdornmentInfo ShowLabel="True" >
                                 </syncfusion:ChartAdornmentInfo>

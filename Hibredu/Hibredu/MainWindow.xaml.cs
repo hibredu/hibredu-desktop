@@ -17,14 +17,12 @@ namespace Hibredu;
 public partial class MainWindow : Window
 {
     private readonly Context context;
-    public List<Student> StudentsData { get; set; }
     Student NewProduct = new();
     Student selectedProduct = new();
 
     public MainWindow(Context context)
     {
         this.context = context;
-        this.StudentsData = context.Students.ToList();
         InitializeComponent();
         GetProducts();
         NewStudentGrid.DataContext = NewProduct;
@@ -32,6 +30,8 @@ public partial class MainWindow : Window
 
     private void GetProducts()
     {
+        StudentsDataAverage.ItemsSource = context.Students.ToList();
+        StudentsDataFrequency.ItemsSource = context.Students.ToList();
         StudentDataGrid.ItemsSource = context.Students.ToList();
         StudentesInGradeRange.ItemsSource = StudentesInGradeRanges(context.Students.ToList());
         StudentesInFrequencyRange.ItemsSource = StudentesInFrequencyRanges(context.Students.ToList());
@@ -42,7 +42,6 @@ public partial class MainWindow : Window
     private void AddItem(object s, RoutedEventArgs e)
     {
         context.Students.Add(NewProduct);
-        context.StudentsData.Add(NewProduct);
         context.SaveChanges();
         GetProducts();
         NewProduct = new Student();
@@ -60,7 +59,6 @@ public partial class MainWindow : Window
     {
         var productToDelete = (s as FrameworkElement).DataContext as Student;
         context.Students.Remove(productToDelete);
-        context.StudentsData.Remove(productToDelete);
         context.SaveChanges();
         GetProducts();
     }
