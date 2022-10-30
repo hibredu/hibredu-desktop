@@ -79,7 +79,7 @@
 
 
                                     <Button Grid.Row="4" Grid.ColumnSpan="2" Width="150" Content="Add student register"
-                                        Margin="15" Click="AddItem"
+                                        Margin="15" Click="AddStudent"
                                         HorizontalAlignment="Center"
                                         VerticalAlignment="Center"/>
                                 </Grid>
@@ -97,21 +97,17 @@
                        VerticalAlignment="Center" Margin="5" 
                        Grid.Row="0" Content="Students data analysis"/>
 
-                <!--Setting DataContext for SfChart-->
                 <Grid>
-
                     <syncfusion:SfChart Header="Graph of average per student" Height="300" Margin="30,0,30,0">
-                        <!--Initialize the horizontal axis for SfChart-->
+
                         <syncfusion:SfChart.PrimaryAxis>
                             <syncfusion:CategoryAxis Header="Student name" FontSize="16"/>
                         </syncfusion:SfChart.PrimaryAxis>
 
-                        <!--Initialize the vertical axis for SfChart-->
                         <syncfusion:SfChart.SecondaryAxis>
                             <syncfusion:NumericalAxis Header="Average" FontSize="16"/>
                         </syncfusion:SfChart.SecondaryAxis>
 
-                        <!--Initialize the series for SfChart-->
                         <syncfusion:ColumnSeries x:Name="StudentsDataAverage"  ListenPropertyChange="True"  ItemsSource="{Binding StudentsData, Mode=OneTime}" XBindingPath="Name" YBindingPath="Average">
                             <syncfusion:ColumnSeries.AdornmentsInfo>
                                 <syncfusion:ChartAdornmentInfo ShowLabel="True" >
@@ -120,13 +116,10 @@
                         </syncfusion:ColumnSeries>
 
                     </syncfusion:SfChart>
-
                 </Grid>
-
             </StackPanel>
-            <!---->
+
             <StackPanel>
-                <!--Setting DataContext for SfChart-->
                 <Grid Height="294">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="0*"/>
@@ -137,17 +130,15 @@
                     </Grid.RowDefinitions>
 
                     <syncfusion:SfChart Header="Graph of frequency per student" Margin="30,10,30,88" Grid.RowSpan="2" Grid.ColumnSpan="2">
-                        <!--Initialize the horizontal axis for SfChart-->
+
                         <syncfusion:SfChart.PrimaryAxis>
                             <syncfusion:CategoryAxis Header="Student name" FontSize="16"/>
                         </syncfusion:SfChart.PrimaryAxis>
 
-                        <!--Initialize the vertical axis for SfChart-->
                         <syncfusion:SfChart.SecondaryAxis>
                             <syncfusion:NumericalAxis Header="Frequency" FontSize="16"/>
                         </syncfusion:SfChart.SecondaryAxis>
 
-                        <!--Initialize the series for SfChart-->
                         <syncfusion:ColumnSeries x:Name="StudentsDataFrequency"  ListenPropertyChange="True"  ItemsSource="{Binding StudentsData, Mode=OneTime}" XBindingPath="Name" YBindingPath="Frequency">
                             <syncfusion:ColumnSeries.AdornmentsInfo>
                                 <syncfusion:ChartAdornmentInfo ShowLabel="True" >
@@ -156,11 +147,9 @@
                         </syncfusion:ColumnSeries>
 
                     </syncfusion:SfChart>
-
                 </Grid>
-
             </StackPanel>
-            <!---->
+
             <StackPanel Height="199">
                 <Grid Width="500">
                     <Label FontSize="20" 
@@ -182,9 +171,6 @@
                             <DataGridTextColumn Header="7.5 - 10.0" Binding="{Binding column4}"/>
                         </DataGrid.Columns>
                     </DataGrid>
-
-
-
                 </Grid>
             </StackPanel>
 
@@ -204,9 +190,6 @@
                             <DataGridTextColumn Header="0.75 - 1.00" Binding="{Binding column4}"/>
                         </DataGrid.Columns>
                     </DataGrid>
-
-
-
                 </Grid>
             </StackPanel>
 
@@ -227,9 +210,6 @@
                             <DataGridTextColumn Header="Maximum" Binding="{Binding column5}"/>
                         </DataGrid.Columns>
                     </DataGrid>
-
-
-
                 </Grid>
             </StackPanel>
 
@@ -241,7 +221,6 @@
                        Grid.Row="0" Content="Student frequency info"/>
 
                     <DataGrid x:Name="StudentesFrequencyInfo" AutoGenerateColumns="False" IsReadOnly="True" ColumnWidth="*" Margin="-26,46,-29,21" IsSynchronizedWithCurrentItem="True">
-
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Average" Binding="{Binding column1}"/>
                             <DataGridTextColumn Header="Median" Binding="{Binding column2}"/>
@@ -250,11 +229,9 @@
                             <DataGridTextColumn Header="Maximum" Binding="{Binding column5}"/>
                         </DataGrid.Columns>
                     </DataGrid>
-
-
-
                 </Grid>
             </StackPanel>
+
         </StackPanel>
     </ScrollViewer>
 </Window>

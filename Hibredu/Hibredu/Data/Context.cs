@@ -7,10 +7,10 @@ namespace Hibredu.Data;
 
 public class Context : DbContext
 {
-
 	public Context()
     {
     }
+
 	public Context(DbContextOptions<Context> options) : base(options)
 	{
 		Database.EnsureCreated();
@@ -20,11 +20,11 @@ public class Context : DbContext
 
 	protected override void OnModelCreating(ModelBuilder modelBuilder)
 	{
-		modelBuilder.Entity<Student>().HasData(GetProducts());
+		modelBuilder.Entity<Student>().HasData(GetStudents());
 		base.OnModelCreating(modelBuilder);
 	}
 
-	private static Student[] GetProducts()
+	private static Student[] GetStudents()
 	{
 		return new Student[]
 		{

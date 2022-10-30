@@ -4,63 +4,58 @@ using System.Windows;
 
 using System;
 using System.Collections.Generic;
-using System.Windows.Controls;
-using System.Windows.Media;
-using System.Windows.Shapes;
 using MathNet.Numerics.Statistics;
 
 namespace Hibredu;
 
-/// <summary>
-/// Interaction logic for MainWindow.xaml
-/// </summary>
 public partial class MainWindow : Window
 {
     private readonly Context context;
-    Student NewProduct = new();
-    Student selectedProduct = new();
+    Student NewStudent = new();
+    Student selectedStudent = new();
 
     public MainWindow(Context context)
     {
         this.context = context;
         InitializeComponent();
-        GetProducts();
-        NewStudentGrid.DataContext = NewProduct;
+        GetStudents();
+        NewStudentGrid.DataContext = NewStudent;
     }
 
-    private void GetProducts()
+    private void GetStudents()
     {
-        StudentsDataAverage.ItemsSource = context.Students.ToList();
-        StudentsDataFrequency.ItemsSource = context.Students.ToList();
-        StudentDataGrid.ItemsSource = context.Students.ToList();
-        StudentesInGradeRange.ItemsSource = StudentesInGradeRanges(context.Students.ToList());
-        StudentesInFrequencyRange.ItemsSource = StudentesInFrequencyRanges(context.Students.ToList());
-        StudentesAverageInfo.ItemsSource = StudentesAverageInfos(context.Students.ToList());
-        StudentesFrequencyInfo.ItemsSource = StudentesFrequencyInfos(context.Students.ToList());
+        var students = context.Students.ToList();
+        StudentsDataAverage.ItemsSource = students;
+        StudentsDataFrequency.ItemsSource = students;
+        StudentDataGrid.ItemsSource = students;
+        StudentesInGradeRange.ItemsSource = StudentesInGradeRanges(students);
+        StudentesInFrequencyRange.ItemsSource = StudentesInFrequencyRanges(students);
+        StudentesAverageInfo.ItemsSource = StudentesAverageInfos(students);
+        StudentesFrequencyInfo.ItemsSource = StudentesFrequencyInfos(students);
     }
 
-    private void AddItem(object s, RoutedEventArgs e)
+    private void AddStudent(object s, RoutedEventArgs e)
     {
-        context.Students.Add(NewProduct);
+        context.Students.Add(NewStudent);
         context.SaveChanges();
-        GetProducts();
-        NewProduct = new Student();
-        NewStudentGrid.DataContext = NewProduct;
+        GetStudents();
+        NewStudent = new Student();
+        NewStudentGrid.DataContext = NewStudent;
     }
 
-    private void UpdateItem(object s, RoutedEventArgs e)
+    private void UpdateStudent(object s, RoutedEventArgs e)
     {
-        context.Update(selectedProduct);
+        context.Update(selectedStudent);
         context.SaveChanges();
-        GetProducts();
+        GetStudents();
     }
 
     private void DeleteStudent(object s, RoutedEventArgs e)
     {
-        var productToDelete = (s as FrameworkElement).DataContext as Student;
-        context.Students.Remove(productToDelete);
+        var studentToDelete = (s as FrameworkElement).DataContext as Student;
+        context.Students.Remove(studentToDelete);
         context.SaveChanges();
-        GetProducts();
+        GetStudents();
     }
 
     private List<GenericTable> StudentesInGradeRanges(List<Student> listStudents)
